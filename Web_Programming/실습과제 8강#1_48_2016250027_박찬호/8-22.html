@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<h1>2016250027 박찬호</h1>
+<p id="demo"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "8-7.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var x, txt, xmlDoc;
+    xmlDoc = xml.responseXML;
+    x = xmlDoc.getElementsByTagName("book")[0].attributes;
+    txt = x.getNamedItem("category").nodeValue + "<br>" + x.length;
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</body>
+</html>

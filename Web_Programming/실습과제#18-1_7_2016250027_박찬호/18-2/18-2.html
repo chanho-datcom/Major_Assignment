@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Furry Friends Campaign</title>
+        <link rel="stylesheet" type="text/css" href="18-2.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    </head> 
+    <body>
+        <h1>2016250027 박찬호</h1>
+        <div id="clickMe">Show me the Furry Friend of the Day</div>
+        <div id="picframe">
+            <img src="furry_friend.jpg">
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#clickMe").click(function(){
+                    $("img").fadeIn(1000);
+                    $("#picframe").slideToggle("slow");
+                });
+            });
+        </script>
+    </body> 
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<meta charset="utf-8">
+<h1>2016250027 박찬호</h1>
+<p id="demo"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "8-7.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    var x = xmlDoc.getElementsByTagName("title");
+    x[0].setAttribute("edition", "first");
+    document.getElementById("demo").innerHTML =
+    "Edition: " + x[0].getAttribute("edition");
+}
+</script>
+</body>
+</html>

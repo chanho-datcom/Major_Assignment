@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>phrase-o-matic</title>
+    <meta charset="utf-8">
+    <style>
+        body{
+            font-family: verdana, helvetica, sans-serif;
+        }
+    </style>
+    <script>
+        function makephrases(){
+            var words1 = ["24/7", "multi-tier", "30,000foot", "b-to-b", "win-win"];
+            var words2 = ["empowred", "value-added", "oriented", "focused", "aligned"];
+            var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+
+            var rand1 = Math.floor(Math.random()*words1.length);
+            var rand2 = Math.floor(Math.random()*words2.length);
+            var rand3 = Math.floor(Math.random()*words3.length);
+
+            var phrase = words1[rand1]+" "+words2[rand2]+" "+words3[rand3];
+            var phraseElement = document.getElementById("phrase");
+            phraseElement.innerHTML = phrase;
+        }
+        window.onload = makephrases;
+    </script>
+</head>
+<body>
+    <p>2016250027 박찬호</p>
+    <h1>Phrase-o-Matic says:</h1>
+    <p id="phrase"></p>
+</body>
+</html>

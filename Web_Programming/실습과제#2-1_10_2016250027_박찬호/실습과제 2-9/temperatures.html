@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>temperatures</title>
+        <meta charset="utf-8">
+        <script>
+            function showtemps(){
+                var tempbyhour = new Array();
+                var tempbyhour = [59.2, 60.1, 63, 65, 62];
+                for (var i = 0; i < 5; i++){
+                    var thetemp = tempbyhour[i];
+                    var id = "temp"+i;
+                    var li = document.getElementById(id);
+                    if(i==0){
+                        li.innerHTML = "the temperature at noon was " + thetemp;
+                    }else{
+                        li.innerHTML = "the temperature at "+ i + "was " +thetemp;
+                    }
+                }
+            }
+            window.onload = showtemps;
+        </script>
+    </head>
+    <body>
+        <p>2016250027 박찬호</p>
+        <h1>Temperatures</h1>
+        <ul>
+            <li id="temp0"></li>
+            <li id="temp1"></li>
+            <li id="temp2"></li>
+            <li id="temp3"></li>
+            <li id="temp4"></li>
+        </ul>
+    </body>
+</html>

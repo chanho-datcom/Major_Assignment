@@ -1,0 +1,32 @@
+/* mightgumball.css */
+
+body {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+div#sales {
+	background-color: #f72206;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	border: 10px solid #6ce61b;
+}
+div.saleItem {
+	font-family: Verdana, Helvetica, sans-serif;
+	padding: 20px;
+}
+div.saleItem:nth-child(2n) {
+	background-color: #eeb109;
+}
+div.saleItem:first-child {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+div.saleItem:last-child {
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;

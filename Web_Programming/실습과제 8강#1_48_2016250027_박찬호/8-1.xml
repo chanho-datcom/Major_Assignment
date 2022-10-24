@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE note [
+<!ENTITY nbsp "&#xA0;">
+<!ENTITY writer "WRITER: Donald Duck.">
+<!ENTITY copyright "Copyright:W3Schools.">
+]>
+
+<note>
+<name>2016250027 박찬호</name>
+<to>tove</to>
+<from>jani</from>
+<heading>reminder</heading>
+<body>Don't forget me this weekend!</body>
+<footer>&writer;&nbsp;&copyright;</footer>
+</note>

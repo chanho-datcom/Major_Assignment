@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "8-7.xml", true);
+xhttp.send();
+
+function myFunction(xml) {
+    var xmlDoc = xml.responseXML;
+    var x;
+    x = xmlDoc.getElementsByTagName("title")[0].childNodes[0];
+    document.getElementById("demo1").innerHTML = x.nodeValue;
+    x.nodeValue = "Easy Cooking";
+    x = xmlDoc.getElementsByTagName("title")[0].childNodes[0];
+    document.getElementById("demo2").innerHTML = x.nodeValue;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width">
+        <title>Book Search</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="pr.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class='container'>
+                <div class="jumbotron jumbotron-fluid" id="id3">
+                        <h3>2016250027 박찬호<h3>      
+                        <p>원하시는 책 제목을 입력하세요.</p>
+                    </div>
+                </div>
+            <input type="text" id="bookname">
+            <input id="search" type="button" value="검색">
+            <ul id="ud">
+
+            </ul>
+            <script>
+                $(document).ready(function () {
+                    $("#search").click(function (){
+                        $.ajax({
+                            method : "GET",
+                            url: "https://dapi.kakao.com/v3/search/book?target=title",
+                            data : { query : $("#bookname").val()},
+                            headers : {Authorization: "KakaoAK 69bb88ae955719b0e9bc04669c5b87dd"}
+                        })
+                            .done(function(msg){
+                                $("#ud").append("<li class='text-primary'><strong>" + msg.documents[0].title + "</strong></li>");
+                                $("#ud").append("<li><img src='" + msg.documents[0].thumbnail + "'/></li>");
+                            })
+                    })
+                })
+            </script>
+        </div>
+    </body>
+</html>

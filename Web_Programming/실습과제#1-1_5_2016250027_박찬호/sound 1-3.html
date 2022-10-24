@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>dog</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="soundslike">Quack, Quack</p>
+        <p>
+            2016250027 박찬호
+        </p>
+        <script>
+            var walksLike="duck"
+            var soundslike=document.getElementById("soundslike");
+            if(walksLike=="dog") {
+                soundslike.innerHTML="Woof! Woof!";
+            } else if(walksLike=="duck") {
+                soundslike.innerHTML="Quack, Quack";
+            } else {
+                soundslike.innerHTML="Crickets...";
+            }
+        </script>
+    </body>
+</html>

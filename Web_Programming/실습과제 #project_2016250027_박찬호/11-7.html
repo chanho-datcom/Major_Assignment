@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Look What I Drew</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <style>
+            canvas { border: 1px solid black; }
+        </style>
+        <style type="text/css">
+        #wrapper{
+            width : 700px;
+            margin : 0 auto;
+        }
+        </style>
+        <script src="11-7.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+                    <div class="jumbotron">
+                      <h1>JokeShirt Design</h1>      
+                      <p>You need canvas to use Jokeshirt! This example requires a browser that supports Canvas</p>
+                    </div>
+        </div>
+        <div id="wrapper">
+        <h1>2016250027 박찬호</h1>
+        <canvas width="600" height="200" id="tshirtCanvas">
+                <p>Please upgrade your brower to use TweeShirt!</p>
+        </canvas>
+        <form>
+            <p>
+                <label for="backgroundColor">selct background color:</label>
+                <select id="backgroundColor">
+                    <option value="white" selected="selected">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </p>
+            <p>
+                <label for="shape">Circles or squres?</label>
+                <select id="shape">
+                    <option value="none" selected="selected">Neither</option>
+                    <option value="circles">Circles</option>
+                    <option value="squares">Squares</option>
+                </select>
+            </p>
+            <p>
+                <label for="foregroundColor">Selcet text color:</label>
+                <select id="foregroundColor">
+                    <option value="black" selected="selected">Black</option>
+                    <option value="white">White</option>
+                </select>
+            </p>
+            <p>
+                <label for="firstName">First Name: </label>
+                    <input id="firstName" type=text />
+            </p>
+            <p>
+                <label for="lastName">Last Name: </label>
+                <input id="lastName"/>
+            </p>
+            <p>
+                <label for="GetJoke">Get Joke : </label>
+                <div id="joke">Here be the comedy!</div>
+            </p>
+            <p>
+                <input type="button" id="previewButton" value="Preview">
+            </p>
+        </form>
+        </div>
+        <script src="http://www.wickedlysmart.com/hfhtml5/tweetshirt/?callback=updateTweets">
+        </script>
+    </body>
+</html>
